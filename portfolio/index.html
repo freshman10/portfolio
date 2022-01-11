@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather+Sans:ital,wght@1,700&display=swap" rel="stylesheet"> 
+  </head>
+  <body">
+    <header class = "header">
+        <div class ="container">
+            <div class="header-navigation">
+            <img class ="logo-image" src="assets/img/logo.png" alt="logo">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
+                <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                <div class="lang-switch-container">
+                    <li class ="lang-item" id="eng">en</li>
+                    <li class="lang-item" id ="divider">/</li>
+                    <li class="lang-item" id ="ru">ru</li>
+                </div>
+            </ul>
+        </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class = "container">
+            <section class="section hero-container" id ="hero">
+                <div class="hero-text">
+                    <h1 class="section-title">Alexa Rise</h1>
+                    <p>Save sincere emotions, romantic feelings and happy momments of life together with professional photographer Alexa Rise</p>
+                    <form>
+                        <button id="hire-me-btn">Hire me</button>
+                    </form>
+                </div>
+               
+            </section>
+            <section class="section skills-container" >
+                <div id ="header-section">
+                <hr id="horizontal-line">
+                <h2 class="section-title">Skills</h2>
+                <hr id="horizontal-line">
+                </div>
+                <ul class ="skills-items">
+                    <li><img src ="assets/img/camera 1.png" alt ="camera" class="skills-camera">
+                    <p class="skills-title">Digital photography</p>
+                    <p class="skills-details">qh-quality photos in the studio and on the nature</p>
+                    </li>
+                    <li><img src ="assets/img/video 1.png" alt ="video" class="skills-video">
+                        <p class="skills-title">Video schooting</p>
+                        <p class="skills-details">Capture your moments so that they always stay with you</p>
+                        </li>
+                    <li><img src ="assets/img/image 1.png" alt ="image" class="skills-image">
+                            <p class="skills-title">Retouch</p>
+                            <p class="skills-details">I strive to make photography supress reality</p>
+                    </li>
+                    <li><img src ="assets/img/mic 1.png" alt ="mic" class="skills-mic">
+                        <p class="skills-title">Audio</p>
+                        <p class="skills-details">Professional sounds recording for video, advertising, portfolio</p>
+                    </li>
+
+                </ul>
+            </section>
+            <section class="section" id ="portfolio">
+                <div id ="header-section">
+                    <hr id="horizontal-line">
+                    <h2 class="section-title">Portfolio</h2>
+                    <hr id="horizontal-line">
+                </div>
+                <div id="seasons">
+                <ul class="portfolio-items">
+                    <li>
+                        <form>
+                            <button>Winter</button>
+                        </form>
+                    </li>
+                    <li><form>
+                        <button>Spring</button>
+                    </form></li>
+                    <li><form>
+                        <button>Summer</button>
+                    </form></li>
+                    <li><form>
+                        <button>Autumn</button>
+                    </form></li>
+                </ul>
+                </div>
+                <div class="portfolio-img-container">
+                    <img src="assets/img/portfolio-img(5).png" alt="img1">
+                    <img src="assets/img/portfolio-img(4).png" alt="img2">
+                    <img src="assets/img/portfolio-img(3).png" alt="img3">
+                    <img src="assets/img/portfolio-img(2).png" alt="img4">
+                    <img src="assets/img/portfolio-img(1).png" alt="img5">
+                    <img src="assets/img/portfolio-img.png" alt="img6">
+                </div>
+            </section>
+            <section class="section" id = "video">
+                <div id ="header-section">
+                    <hr id="horizontal-line">
+                    <h2 class="section-title">Video</h2>
+                    <hr id="horizontal-line">
+                </div>
+                <div class ="video-player">
+                    <img src="assets/img/video-player.png" alt="video-player">
+                    
+                    <img src ="assets/img/Play_hover.png" alt="play-hover" class="play-hover">
+                </div>
+            </section>
+            <section class="section" id = "price">
+                <h2 class="section-title">price</h2>
+            </section>
+            <section class="section" id ="contacts"><h2 class="section-title">contacts</h2></section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class = "container"></div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

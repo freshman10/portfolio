@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  /*max-width: 1440px;*/
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header-navigation {
+  display: flex;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  list-style: none;
+  color: white;
+  padding: 5px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  padding: 0 20px;
+  line-height: 50px;
+  transition: 0.3s;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.section-item a:hover {
+  color: #4d2323;
+}
+
+.header > .container {
+  background: url("./assets/img/bg.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.main .logo {
+  background-image: url("./assets/svg/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+.logo:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.lang-switch-container {
+  display: flex;
+  line-height: 50px;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.lang-item {
+  font-size: 20px;
+  padding: 0 5px;
+  margin-left: auto;
+}
+
+#divider {
+  width: auto;
+}
+
+#eng {
+  color: #bdae82;
+}
+
+.logo-image {
+  padding: 20px 0 0 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.hero-text {
+  padding: 160px 0 0 80px;
+  height: 330px;
+  width: 500px;
+}
+
+.hero-text > .section-title {
+  font-weight: bold;
+  font-size: 60px;
+  color: #ffffff;
+}
+.hero-text > p {
+  color: #ffffff;
+  font-size: 20px;
+  width: 490px;
+  height: 120px;
+  line-height: 40px;
+  top: 130px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.hero-container {
+  background-image: url("./assets/img/bg.png");
+  background-position: center -90px;
+  background-repeat: no-repeat;
+  height: 820px;
+}
+
+#hire-me-btn {
+  width: 220px;
+  height: 55px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  align-content: center;
+  border: solid #bdae82;
+  background-color: #bdae82;
+}
+
+.skills-container {
+  background-color: black;
+}
+
+#header-section {
+  display: flex;
+  color: #bdae82;
+  font-size: 40px;
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 80px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#horizontal-line {
+  align-self: center;
+  width: 294px;
+  size: 2px;
+  color: #bdae82;
+}
+#header-section > .section-title {
+  padding: 0 20px;
+}
+
+.skills-items {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-camera {
+  width: 62px;
+  height: 50px;
+  padding-left: 129px;
+}
+.skills-video {
+  padding-left: 130px;
+  width: 60px;
+  height: 50px;
+}
+.skills-image {
+  padding-left: 127px;
+  width: 66px;
+  height: 50px;
+}
+.skills-mic {
+  padding-left: 144px;
+  width: 32px;
+  height: 50px;
+}
+
+.skills-title {
+  padding: 40px 0 0 20px;
+  font-weight: 700;
+  font-size: 20px;
+  width: 280px;
+  font-style: normal;
+  height: 40px;
+  color: white;
+  line-height: 40px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+.skills-items > li {
+  width: 320px;
+  height: 240px;
+}
+
+.skills-details {
+  padding: 60px 0 0 20px;
+  width: 280px;
+  height: 72px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  color: white;
+  line-height: 36px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+#seasons {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-items {
+  display: flex;
+  align-content: center;
+  list-style: none;
+}
+
+#portfolio {
+  background-color: black;
+  width: 1440px;
+  height: 1500px;
+}
+.portfolio-items > li > form > button {
+  color: #bdae82;
+  width: 220px;
+  height: 55px;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 40px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  border: 2px solid #bdae82;
+  margin: 0 5px;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+.portfolio-img-container > img {
+  width: 450px;
+  height: 560px;
+  margin: 10px 10px;
+  margin-left: 0;
+}
+
+.portfolio-img-container {
+  width: 1400px;
+  height: 1145px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#video {
+  width: 1440px;
+  height: 945px;
+  background-color: black;
+}
+
+.video-player {
+  background-image: "assets/img/video-player.png";
+  width: 1400px;
+  height: 705px;
+}
+.play-hover {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  left: 656px;
+}
