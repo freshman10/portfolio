@@ -265,10 +265,44 @@ html {
   background-image: "assets/img/video-player.png";
   width: 1400px;
   height: 705px;
+  
 }
 .play-hover {
   width: 130px;
   height: 130px;
-  position: absolute;
+  position:relative;
   left: 656px;
+  top: -405px;
 }
+
+#price{
+  width: 1440px;
+  height: 845px;
+  background-color:black ;
+}
+
+#price-items-container{
+  width: 1400px;
+  height: 505px;
+  display: flex;
+  align-content: center;
+  color: white;
+}
+
+#price-items-container > ul {
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#price-items-container > ul > li {
+  width: 450px;
+  height: 505px;
+  
+}
+
+
