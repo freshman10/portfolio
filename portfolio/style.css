@@ -6,15 +6,16 @@ body {
   background-color: black;
 }
 .container {
-  /*max-width: 1440px;*/
-  width: 1440px;
+  width: auto;
+  max-width: 1440px;
+
   margin: 0 auto;
   padding: 0 20px;
 }
 .header-navigation {
   display: flex;
 }
-.nav-list {
+.menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -136,7 +137,9 @@ html {
 .hero-container {
   background-color: #000000;
   background-image: url("./assets/img/bg.jpg");
-  background-position: 7px -90px;
+  background-repeat: no-repeat;
+
+  background-position: center -90px;
   background-repeat: no-repeat;
   height: 820px;
 }
@@ -175,7 +178,8 @@ html {
   text-align: center;
   font-style: normal;
   font-weight: 700;
-  width: 700px;
+  width: auto;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -193,18 +197,20 @@ html {
 .skills-items {
   display: flex;
   height: 242px;
-  width: 1440px;
-  margin-top: -40px;
+  width: auto;
+  max-width: 1440px;
+  margin-top: -35px;
 }
 .skills-items > div {
   width: 320px;
   height: 240px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-items > div > img {
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -340,11 +346,6 @@ html {
   padding-bottom: 25px;
 }
 
-.portfolio-img-container > img:hover {
-  transform: scale(1.05);
-  transition: 1s;
-}
-
 .portfolio-img-container {
   width: 1440px;
   height: 1145px;
@@ -361,18 +362,23 @@ html {
 }
 
 .video-player {
-  background-image: "assets/img/video-player.jpg";
+  background-image: url(assets/img/video-player.jpg);
+  background-position: center 0px;
+  background-repeat: no-repeat;
+
   width: 1400px;
   height: 705px;
   margin-top: -40px;
   margin-left: 20px;
+  display: flex;
+  justify-content: center;
 }
 .play-hover {
   width: 130px;
   height: 130px;
-  position: relative;
-  left: 637px;
-  top: -420px;
+  padding-top: 288px;
+  padding-left: 2px;
+  padding-bottom: 288px;
   background-color: transparent;
   border: none;
 }
@@ -482,9 +488,10 @@ html {
 .contacts-container {
   width: 450px;
   height: 445px;
-  position: relative;
-  top: 60px;
-  left: 970px;
+  margin-left: auto;
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 50px;
 }
 .contacts-container > h2 {
   color: #bdae82;
@@ -597,7 +604,7 @@ input::-webkit-input-placeholder {
   list-style: none;
 }
 .footer-data > div > p {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -644,4 +651,567 @@ input::-webkit-input-placeholder {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
   animation: bounce 1s;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    height: 39px;
+    padding-top: 25px;
+    padding-right: 46px;
+    z-index: 12;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .hamburger > .line {
+    width: auto;
+    background-color: #ffffff;
+    height: 3px;
+  }
+
+  #hamburger.is-active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  #hamburger.is-active {
+    padding-right: 53px;
+  }
+
+  #hamburger.is-active .line:nth-child(1) {
+    height: 2px;
+    width: 60px;
+    -webkit-transform: translateY(13px) rotate(-45deg);
+    -ms-transform: translateY(13px) rotate(-45deg);
+    -o-transform: translateY(13px) rotate(-45deg);
+    transform: translateY(13px) rotate(-45deg);
+    transition: 0.5s;
+  }
+
+  #hamburger.is-active .line:nth-child(3) {
+    height: 2px;
+    width: 60px;
+    -webkit-transform: translateY(-13px) rotate(45deg);
+    -ms-transform: translateY(-13px) rotate(45deg);
+    -o-transform: translateY(-13px) rotate(45deg);
+    transform: translateY(-13px) rotate(45deg);
+    transition: 0.5s;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .header-navigation {
+    justify-content: space-between;
+  }
+
+  .lang-switch-container {
+    margin-left: auto;
+    padding-right: 32px;
+  }
+  .logo-image {
+    padding-left: 60px;
+  }
+
+  .lang-item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #ru {
+    margin-right: 10px;
+  }
+  #divider {
+    margin-right: 8px;
+  }
+  .header > .container {
+    background-size: auto 620px;
+    height: 90px;
+    background-position: -5px -30px;
+  }
+
+  .hero-container {
+    background-size: auto 620px;
+    background-position: -5px -120px;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0px;
+  }
+
+  .hero-text {
+    width: auto;
+    height: 500px;
+    padding-left: 60px;
+    padding-top: 80px;
+  }
+
+  .hero-text > .section-title {
+    width: auto;
+    height: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 64px;
+  }
+
+  .hero-text > p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 9px;
+    width: auto;
+    max-width: 390px;
+    min-height: 72px;
+  }
+
+  #hire-me-btn {
+    margin-top: -15px;
+  }
+
+  .header-section {
+    font-size: 32px;
+    line-height: 40px;
+    width: auto;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+  }
+
+  .horizontal-line {
+    max-width: 115px;
+    height: 0.7px;
+    background-color: #bdae82;
+    border-radius: 0px;
+  }
+
+  .header-section > .section-title {
+    padding: 100px 20px;
+    font-size: 32px;
+  }
+
+  .skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    width: auto;
+    max-width: 690px;
+    padding: 0;
+    margin: 0;
+    margin-top: -63px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-items > div {
+    display: flex;
+    justify-content: center;
+    min-height: 224px;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  .skills-items > div > img {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-title {
+    box-sizing: border-box;
+    width: auto;
+    max-width: 280px;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .skills-details {
+    width: auto;
+    max-width: 280px;
+    height: auto;
+
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #portfolio {
+    width: auto;
+    height: auto;
+    max-width: 768px;
+    padding-left: 15px;
+    margin-top: 22px;
+  }
+  #portfolio > .header-section > hr {
+    max-width: 110px;
+  }
+  #portfolio > .header-section > h2 {
+    width: auto;
+    max-width: 185px;
+  }
+  #portfolio > .header-section {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 9px;
+    max-width: 364px;
+    padding-left: 4px;
+  }
+  .portfolio-items {
+    flex-flow: wrap;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 5px;
+  }
+  .season-button {
+    margin: 2px;
+  }
+  #seasons {
+    width: auto;
+    max-width: 768px;
+    margin-top: 0px;
+  }
+
+  .portfolio-img-container {
+    max-width: 450px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 90px;
+  }
+
+  .portfolio-img-container > img {
+    width: auto;
+    max-width: 450px;
+    height: auto;
+    max-height: 560px;
+  }
+
+  #video {
+    width: auto;
+    max-width: 768px;
+    height: 628px;
+    margin-top: -25px;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .video-player {
+    height: 54.4vw;
+    width: auto;
+    max-width: 768px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    margin-top: -30px;
+    background-size: auto 418px;
+    background-position: -3px 2px;
+    background-repeat: no-repeat;
+  }
+
+  .play-hover > img {
+    max-width: 65px;
+    max-height: 65px;
+  }
+
+  .play-hover {
+    padding-top: 178px;
+    padding-left: 16px;
+  }
+
+  #price {
+    width: auto;
+    max-width: 768px;
+    height: auto;
+  }
+
+  #price > div {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+  }
+
+  #price-items-container {
+    width: auto;
+    max-width: 768px;
+    height: auto;
+    padding-left: 40px;
+  }
+
+  #price-items-container > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0px;
+    margin-top: -30px;
+  }
+
+  #price-items-container > div > div {
+    max-width: 420px;
+    max-height: 505px;
+    margin-bottom: 50px;
+  }
+
+  #contacts {
+    background-image: url("./assets/img/contacts_768.jpg");
+    width: auto;
+    max-width: 768px;
+    max-height: 600px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contacts-container {
+    width: auto;
+    max-width: 450px;
+    max-height: 429px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 65px;
+  }
+  .contacts-container > h2 {
+    font-size: 32px;
+    line-height: 64px;
+    text-align: center;
+  }
+  .contacts-container > form > button {
+    margin-left: 115px;
+    margin-top: 27px;
+    border: none;
+  }
+  .contacts-container > form > input,
+  .contacts-container > form > textarea {
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 18px;
+  }
+
+  .footer-container {
+    width: auto;
+    max-width: 768px;
+    max-height: 190px;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 14px;
+  }
+  .footer-data {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    line-height: 24px;
+  }
+  .footer-container > p {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-top: 5px;
+    line-height: 24px;
+  }
+  .footer-svgs {
+    max-width: 188px;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: space-between;
+    padding-left: 15px;
+  }
+  .footer-svgs > li {
+    padding-left: 0px;
+  }
+
+  .menu {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    right: -620px;
+    transition: all 1s ease-in-out;
+    flex-direction: column;
+    max-width: 603px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    justify-content: start;
+    padding-top: 145px;
+    z-index: 10;
+    padding-right: 0px;
+  }
+  .header-navigation {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .open {
+    right: 0;
+  }
+  .container {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .menu > .nav-item {
+    padding-bottom: 38.5px;
+    margin-right: auto;
+    margin-right: auto;
+  }
+  .menu > .nav-item > .nav-link {
+    font-size: 35px;
+    font-weight: 400;
+    padding-left: 127px;
+  }
+}
+
+@media (max-width: 585px) {
+  .contacts-container > form > input,
+  .contacts-container > form > textarea {
+    width: auto;
+    max-width: 80%;
+  }
+
+  .contacts-container {
+    margin-left: 20px;
+  }
+
+  .contacts-container > form > button {
+    margin-left: auto;
+  }
+
+  .portfolio-img-container {
+    width: auto;
+  }
+
+  .portfolio-img-container > img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  #price-items-container > div > div {
+    width: auto;
+  }
+  .contacts-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 769px) {
+  .nav-list,
+  .header-section {
+    width: auto;
+  }
+  .container {
+    padding: 0;
+  }
+
+  .transparent-layer {
+    visibility: hidden;
+  }
+
+  .header-section,
+  #seasons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+  }
+
+  .skills-items > div {
+    margin-bottom: 35px;
+  }
+  #seasons,
+  .portfolio-items,
+  .portfolio-img-container,
+  #price-items-container {
+    width: auto;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  #portfolio,
+  #video,
+  .video-player,
+  #price,
+  #contacts,
+  .footer-container {
+    width: auto;
+    height: auto;
+  }
+  #portfolio {
+    width: 100%;
+  }
+  .video-player {
+    width: auto;
+    height: 705px;
+    background-position: center 00px;
+    background-repeat: no-repeat;
+  }
+  .play-hover {
+    padding-top: 270px;
+  }
+
+  .season-button {
+    margin-bottom: 5px;
+  }
+
+  .portfolio-img-container > img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #price-items-container > div {
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  #price-items-container > div > div {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+.transparent-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.visible-off {
+  visibility: hidden;
 }
