@@ -60,11 +60,14 @@ html {
   padding: 20px 0 0 20px;
   height: 50px;
   width: 50px;
+  overflow: hidden;
+  position: relative;
 }
 .logo-image:hover,
 .nav-link:hover,
-#eng:hover,
-#ru:hover {
+#en:hover,
+#ru:hover,
+.theme-switch:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 
@@ -81,7 +84,7 @@ html {
   line-height: 50px;
   list-style: none;
   color: white;
-  padding: 20px 20px 20px 0;
+  padding: 20px 30px 20px 0;
   box-sizing: content-box;
 }
 
@@ -97,10 +100,6 @@ html {
 
 #divider {
   width: auto;
-}
-
-#eng {
-  color: #bdae82;
 }
 
 .hero-text {
@@ -155,6 +154,8 @@ html {
   font-family: "Inter", sans-serif;
   font-weight: normal;
   line-height: 40px;
+  overflow: hidden;
+  position: relative;
 }
 
 #hire-me-btn:hover {
@@ -163,6 +164,34 @@ html {
   background-color: black;
   color: #bdae82;
   border: 2px solid #bdae82;
+}
+
+#hire-me-btn:focus {
+  outline: none;
+}
+
+.order,
+.send-message {
+  overflow: hidden;
+  position: relative;
+}
+#hire-me-btn .circle,
+.order .circle,
+.send-message .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }
 
 .skills-container {
@@ -309,7 +338,6 @@ html {
 }
 
 #portfolio {
-  background-color: black;
   width: 1440px;
   height: 1500px;
 }
@@ -325,7 +353,6 @@ html {
   text-align: center;
   border: 2px solid #bdae82;
   margin-right: 5px;
-  background-color: black;
 }
 .season-button:hover {
   background-color: #bdae82;
@@ -358,7 +385,6 @@ html {
 #video {
   width: 1440px;
   height: 945px;
-  background-color: black;
 }
 
 .video-player {
@@ -391,7 +417,6 @@ html {
 #price {
   width: 1440px;
   height: 845px;
-  background-color: black;
 }
 
 #price-items-container {
@@ -1214,4 +1239,49 @@ input::-webkit-input-placeholder {
 
 .visible-off {
   visibility: hidden;
+}
+
+.active-lang {
+  color: #bdae82;
+}
+
+.theme-switch {
+  margin-right: 20px;
+}
+.theme-switch:hover {
+  cursor: pointer;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+.black-font {
+  color: #000000;
+}
+
+.black-line-color {
+  border-color: black;
+}
+
+.white-font {
+  color: white;
+}
+
+.black-bg {
+  background-color: #000000;
+}
+
+.golden-font {
+  color: #bdae82;
+}
+
+:root {
+  --button-bg-color: black;
+  --button-font-color: white;
+}
+
+.button-style {
+  color: var(--button-font-color);
+  background-color: var(--button-bg-color);
 }
